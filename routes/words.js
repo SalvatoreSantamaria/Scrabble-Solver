@@ -1,28 +1,34 @@
 const express = require('express')
 const router = express.Router()
 const findAnagrams = require('find-anagrams');
-
-
+const words_list = require('./words_array_file.js')
 
 
 // Get all
 router.get('/', (req, res) => {
 
-  let result = findAnagrams([
-    'listen',
-    'silent',
-    'enlist',
-    'word',
-    'dog',
-    'god',
-    'server',
-    'revers',
-    "hat","ah","ha","th","at","a"
-  ], 'ha');
-  
+  //working file import
+  //console.log(words_list.contents.words_array)
+  let all_words = words_list.contents.words_array
+
+
+  // basic search works
+  // let result = findAnagrams([
+  //   'listen',
+  //   'silent',
+  //   'enlist',
+  //   'word',
+  //   'dog',
+  //   'god',
+  //   'server',
+  //   'revers',
+  //   "hat","ah","ha","th","at","a"
+  // ], 'ha');
+  // console.log(result)
+
+
+  let result = findAnagrams(all_words, 'ha')
   console.log(result)
-
-
 
   res.send('Hello world')
 })

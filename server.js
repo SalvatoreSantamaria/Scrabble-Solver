@@ -18,4 +18,4 @@ app.use(express.json())
 const wordsRouter = require('./routes/words')
 app.use('/words', wordsRouter)
 
-app.listen(3000, () => console.log('Server Started'))
+app.listen(8080, () => console.log('Server Started'))

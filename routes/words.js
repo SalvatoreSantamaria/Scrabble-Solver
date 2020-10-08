@@ -50,7 +50,11 @@ router.get('/:id', (req, res) => {
     return branches;
   };
   let letterCombinations = tree(input_word.split('')).map(function(str) {
-    return str.join('')
+    if (str.length > 1) {
+      return str.join('')
+    } else {
+      return str
+    }
   })
   //console.log(letters)
 
@@ -63,7 +67,7 @@ router.get('/:id', (req, res) => {
   });
 
   console.log(valid_scrabble_words)
-
+  res.send(valid_scrabble_words)
   // working
   // res.send(req.params.id)
   
@@ -77,18 +81,6 @@ router.get('/', (req, res) => {
 // Stopped at 12 minutes: https://www.youtube.com/watch?v=fgTGADljAeg
 
 
-// steps here
-// add words file to project, and get all the words to show with get all
-// accept input in api
-// use input to filter words
-// use input to return word filters
-// filter with str.includes()
-// pseudo:
-// break apart input string into h,a,t ha, ht, etc, and other combos 
-// see if the the word list includes any combos
-// if includes any combos, then push to an arr 
-// then return array
-// improve word filter to sort correctly
 
 // fetch('._files/words.json').then(res => res.json()).then(console.log)
 

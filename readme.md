@@ -3,7 +3,7 @@ To start, download project and run npm install to install node modules
 Run Server with npm run devStart
 
 note: remove find anagrams? https://www.npmjs.com/package/find-anagrams
-
+note: 
 
 steps: 
 
@@ -21,6 +21,8 @@ steps:
 // then return array
 // fix bug so that invalid input doesn't crash app
 
+// remove duplicates
+// work with uppercase words
 // improve word filter to sort correctly
 // needs to run on localhost:8080/
 // add tests

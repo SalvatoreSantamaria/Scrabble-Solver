@@ -2,4 +2,4 @@ GET http://localhost:3000/words
 
 ###
 
-GET http://localhost:3000/words/12
+GET http://localhost:3000/words/hat

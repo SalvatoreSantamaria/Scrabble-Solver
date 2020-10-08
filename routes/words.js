@@ -4,8 +4,10 @@ const findAnagrams = require('find-anagrams');
 const words_list = require('./words_array_file.js')
 
 
-// Get all
-router.get('/', (req, res) => {
+// Get one
+router.get('/:id', (req, res) => {
+
+  let input_word = req.params.id;
 
   //working file import
   //console.log(words_list.contents.words_array)
@@ -47,7 +49,7 @@ router.get('/', (req, res) => {
     }
     return branches;
   };
-  let letterCombinations = tree("hat".split('')).map(function(str) {
+  let letterCombinations = tree(input_word.split('')).map(function(str) {
     return str.join('')
   })
   //console.log(letters)
@@ -62,13 +64,14 @@ router.get('/', (req, res) => {
 
   console.log(valid_scrabble_words)
 
-
-  res.send('Hello world')
+  // working
+  // res.send(req.params.id)
+  
 })
 
-// Get one
-router.get('/:id', (req, res) => {
-  res.send(req.params.id)
+// Get all
+router.get('/', (req, res) => {
+  res.send('Hello world')
 })
 
 // Stopped at 12 minutes: https://www.youtube.com/watch?v=fgTGADljAeg

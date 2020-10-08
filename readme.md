@@ -20,9 +20,9 @@ steps:
 // if includes any combos, then push to an arr 
 // then return array
 // fix bug so that invalid input doesn't crash app
-
 // remove duplicates
-// work with uppercase words
 // improve word filter to sort correctly
+// work with uppercase words
 // needs to run on localhost:8080/
+
 // add tests

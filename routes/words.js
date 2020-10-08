@@ -7,7 +7,7 @@ const words_list = require('./words_array_file.js')
 // Get one
 router.get('/:id', (req, res) => {
 
-  let input_word = req.params.id;
+  let input_word = (req.params.id).toLowerCase();
 
   //working file import
   //console.log(words_list.contents.words_array)

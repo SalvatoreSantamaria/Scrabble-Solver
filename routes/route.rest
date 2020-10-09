@@ -1,7 +1,5 @@
 GET http://localhost:8080/words
 
-###
-
+### Change the end word 'hats' to any word you like
 GET http://localhost:8080/words/hats
-
 

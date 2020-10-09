@@ -4,7 +4,7 @@ const words_list = require('../_files/words_array_file.js')
 
 router.get('/', async (req, res) => {
   try {
-    res.send('Hello! To get a value sorted anagram list of a word, enter a word to the end of the address at http://localhost:8080/words/. Try http://localhost:8080/words/hat')
+    res.send('Hello! To get a value sorted anagram list of a word, enter a word to the end of the address at http://localhost:8080/words/. Try http://localhost:8080/words/hat!')
   } catch (err) {
     res.status(500).json({message: err.message})
   }

@@ -2,6 +2,6 @@ GET http://localhost:8080/words
 
 ###
 
-GET http://localhost:8080/words/factories
+GET http://localhost:8080/words/hats
 
 

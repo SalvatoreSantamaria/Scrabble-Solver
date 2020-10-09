@@ -13,6 +13,11 @@ router.get('/', async (req, res) => {
 router.get('/:word', async (req, res) => {
   try {
     let input_word = (req.params.word).toLowerCase();
+
+    if (input_word.length > 7) {
+      throw new Error('Word must be less than 8 characters')
+    }
+
     let all_words = words_list.contents.words_array
     let valid_scrabble_words = []
 

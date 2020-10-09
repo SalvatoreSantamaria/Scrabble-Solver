@@ -24,7 +24,7 @@ describe('GET to /words', () => {
     chai.request('http://localhost:8080')
     .get("/words/")
     .end((err, response) => {
-      response.text.should.be.eq('Hello! To get a value sorted anagram list of a word, enter a word to the end of the address at http://localhost:8080/words/. Try http://localhost:8080/words/hat');
+      response.text.should.be.eq('Hello! To get a value sorted anagram list of a word, enter a word to the end of the address at http://localhost:8080/words/. Try http://localhost:8080/words/hat!');
       done();
     });
   });
@@ -85,6 +85,19 @@ describe('GET request with a single letter to /words/:word', () => {
     .get("/words/" + word)
     .end((err, response) => {
       response.text.should.be.eq('["a"]')
+      done();
+    });
+  });
+});
+
+describe('GET request with a more than 7 letters to /words/:word', () => {
+  it("It should throw an error", (done) => {
+    const word = 'abcdefgh'
+    chai.request('http://localhost:8080')
+    .get("/words/" + word)
+    .end((err, response) => {
+      console.log(response)
+      response.text.should.be.eq('{"message":"Word must be less than 8 characters"}')
       done();
     });
   });

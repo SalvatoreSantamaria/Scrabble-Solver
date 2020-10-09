@@ -4,6 +4,7 @@ Run Server with npm run devStart
 
 note: remove find anagrams? https://www.npmjs.com/package/find-anagrams
 note: return format?
+note: large words return too many combos
 
 steps: 
 
@@ -29,3 +30,4 @@ steps:
 // at resp errors to api
 
 // add tests
+// fix api error status codes
